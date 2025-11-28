@@ -27,11 +27,13 @@
     <textarea id="bulk_input" placeholder='Paste JSON array of tasks here'></textarea>
 
     <label for="strategy">Sorting Strategy:</label>
-    <select id="strategy">
+    <select id="strategy" required>
+      <option value="" selected disabled>Select sorting strategy</option>
       <option value="smart">Smart Balance</option>
       <option value="fastest">Fastest Wins</option>
       <option value="impact">High Impact</option>
       <option value="deadline">Deadline Driven</option>
+
     </select>
 
     <button id="analyze-btn">Analyze Tasks</button>
@@ -49,3 +51,4 @@
 <script src="{% static 'tasks/script.js' %}"></script>
 </body>
 </html>
+
