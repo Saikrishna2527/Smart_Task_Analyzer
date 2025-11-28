@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Smart Task Analyzer</title>
+  <link rel="stylesheet" href="{% static 'tasks/style.css' %}">
+</head>
+<body>
+<div class="container">
+  <h1>Smart Task Analyzer</h1>
+
+  <!-- Input Form -->
+  <section id="input-section">
+    <h2>Add Individual Task</h2>
+    <form id="task-form">
+      <input type="text" id="title" placeholder="Title" required />
+      <input type="date" id="due_date" required />
+      <input type="number" id="estimated_hours" min="0" step="0.5" placeholder="Estimated Hours" required />
+      <input type="number" id="importance" min="1" max="10" placeholder="Importance (1-10)" required />
+      <input type="text" id="dependencies" placeholder="Dependencies (comma-separated IDs)" />
+      <button type="submit">Add Task</button>
+    </form>
+
+    <h2>Or Bulk Input Tasks (JSON Array)</h2>
+    <textarea id="bulk_input" placeholder='Paste JSON array of tasks here'></textarea>
+
+    <label for="strategy">Sorting Strategy:</label>
+    <select id="strategy">
+      <option value="smart">Smart Balance</option>
+      <option value="fastest">Fastest Wins</option>
+      <option value="impact">High Impact</option>
+      <option value="deadline">Deadline Driven</option>
+    </select>
+
+    <button id="analyze-btn">Analyze Tasks</button>
+
+    <div id="feedback" role="alert"></div>
+  </section>
+
+  <!-- Output Section -->
+  <section id="output-section">
+    <h2>Analyzed Tasks</h2>
+    <div id="output"></div>
+  </section>
+</div>
+
+<script src="{% static 'tasks/script.js' %}"></script>
+</body>
+</html>
