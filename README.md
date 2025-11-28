@@ -1,19 +1,19 @@
 1) Setup Instructions:
 
-1) Clone repo and enter backend folder.
+Clone repo and enter backend folder.
 
-2) Create and activate virtualenv.
+Create and activate virtualenv.
 
-3) Install dependencies: pip install -r requirements.txt
+Install dependencies: pip install -r requirements.txt
 
-4) Run migrations: python manage.py migrate
+Run migrations: python manage.py migrate
 
-5) Start dev server: python manage.py runserver
+Start dev server: python manage.py runserver
 
-6) Open http://127.0.0.1:8000/ to access the Task Analyzer UI.
+Open http://127.0.0.1:8000/ to access the Task Analyzer UI.
 
 
-2)Algorithm Explanation:
+2) Algorithm Explanation:
 
 Inputs per task: due_date, importance (1–10), estimated_hours, dependencies, plus generated id.
 
@@ -88,15 +88,15 @@ Writing tests + README: 30 minutes.
 
 5) Future Improvements:
 
-1) Allow users to customize weights for urgency/importance/effort/dependencies.
+ Allow users to customize weights for urgency/importance/effort/dependencies.
 
-2) Persist tasks in the database with CRUD views instead of in-memory / bulk JSON only.
+ Persist tasks in the database with CRUD views instead of in-memory / bulk JSON only.
 
-3) More advanced dependency graph handling (detect cycles, visualize blocking chains).
+ More advanced dependency graph handling (detect cycles, visualize blocking chains).
 
-4) Better UI (filtering, searching, drag-and-drop reordering, mobile-optimized layout).
+ Better UI (filtering, searching, drag-and-drop reordering, mobile-optimized layout).
 
-5) Authentication and per-user task lists if this were expanded into a real product.
+ Authentication and per-user task lists if this were expanded into a real product.
 
-6) More robust tests: edge cases (missing fields, invalid dates, huge efforts, circular dependencies).
+ More robust tests: edge cases (missing fields, invalid dates, huge efforts, circular dependencies).
 
